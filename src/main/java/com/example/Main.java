@@ -9,5 +9,8 @@ public class Main {
         System.out.println(dto.getName());
         System.out.println(dto.getAge());
 
+        Family family = new Family(new Dto[] { dto });
+        family.printFamily();
+
     }
 }
