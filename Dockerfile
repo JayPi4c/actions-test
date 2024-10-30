@@ -10,7 +10,7 @@ RUN ./mvnw dependency:go-offline
 
 COPY src src
 
-RUN  --mount=type=cache,target=/root/.m2 ./mvnw --activate-profiles docker --batch-mode --update-snapshots clean install package
+RUN ./mvnw --activate-profiles docker --batch-mode --update-snapshots clean install package
 
 FROM eclipse-temurin:23-jre-alpine
 WORKDIR /opt/testapp
